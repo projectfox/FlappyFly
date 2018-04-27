@@ -4,8 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Column
-  - coin
+  - Bird
   layers:
   - Default
   - TransparentFX
@@ -43,6 +42,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: 'Ground '
-    uniqueID: 2074559381
+  - name: Ground
+    uniqueID: 133983383
+    locked: 0
+  - name: Enemias
+    uniqueID: 1426579523
     locked: 0

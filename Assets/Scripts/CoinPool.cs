@@ -12,11 +12,12 @@ public class CoinPool : MonoBehaviour {
     private GameObject[] coins;
     private Vector2 objectPoolPosition = new Vector2(-15f, -25f);
     private float timeSinceLastSpawned;
-    private float spawnXPosition = 0;
+    private float spawnXPosition = 10f;
     private int currentCoin = 0;
 	
 	void Start () {
         coins = new GameObject[coinsPoolSize];
+
         for (int i = 0; i < coinsPoolSize; i++) {
             coins[i] = Instantiate(coinsPrefab, objectPoolPosition, Quaternion.identity);
             coins[i].transform.SetParent(transform);
@@ -30,8 +31,8 @@ public class CoinPool : MonoBehaviour {
         if ( GameControl.instance.gameOver == false && timeSinceLastSpawned >= spawnRate) {
 
             timeSinceLastSpawned = 0;
-            float spawnYPosition = Random.Range (coinMin, coinMax);
-            coins[currentCoin].transform.position = new Vector2(spawnXPosition, spawnYPosition);
+            float spawnYPosition = Random.Range(coinMin, coinMax);
+            coins[currentCoin].transform.position = new Vector2(spawnXPosition, spawnYPosition); //error 
             currentCoin++;
             if (currentCoin >= coinsPoolSize) {
 
